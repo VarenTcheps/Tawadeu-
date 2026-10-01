@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Tawadeu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Tawadeu accueil">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="#16532a" />
+            <path d="M24 12c1.4 5.2 4.8 8.8 10 10-5.2 1.2-8.6 4.8-10 10-1.4-5.2-4.8-8.8-10-10 5.2-1.2 8.6-4.8 10-10z" fill="#f6f1e4" />
+          </svg>
+          <span class="logo-text">
+            <strong>TAWADEU</strong>
+            <span>Chips & snacks</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Principal">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="catalog.html">Catalogue</a>
+          <a class="nav-cta is-active" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="kicker">Parlons-en</p>
+          <h1>Contact</h1>
+          <p class="page-intro">
+            Structure prête pour les coordonnées, les commandes et les questions. Les vrais numéros et l’envoi du formulaire viendront ensuite.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-layout">
+          <aside class="contact-card">
+            <h2>Coordonnées</h2>
+            <ul class="contact-list">
+              <li>
+                <span>Adresse</span>
+                Ngaoundéré, Cameroun
+              </li>
+              <li>
+                <span>Téléphone</span>
+                À renseigner
+              </li>
+              <li>
+                <span>E-mail</span>
+                À renseigner
+              </li>
+              <li>
+                <span>Horaires</span>
+                À renseigner
+              </li>
+            </ul>
+          </aside>
+
+          <div class="form-card card">
+            <h2>Écrire un message</h2>
+            <form id="contact-form">
+              <label>
+                Nom
+                <input type="text" name="name" placeholder="Votre nom" />
+              </label>
+              <label>
+                E-mail
+                <input type="email" name="email" placeholder="vous@exemple.com" />
+              </label>
+              <label>
+                Sujet
+                <select name="subject">
+                  <option>Commande</option>
+                  <option>Partenariat</option>
+                  <option>Autre</option>
+                </select>
+              </label>
+              <label>
+                Message
+                <textarea name="message" placeholder="Votre message"></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+              <p class="form-note" id="form-note">Le formulaire n’envoie rien pour l’instant : c’est un squelette.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Tawadeu</h3>
+            <p>ETS Kamite Gourmets — chips & snacks. Texte de pied de page à compléter.</p>
+          </div>
+          <div>
+            <h3>Pages</h3>
+            <p><a href="about.html">À propos</a><br /><a href="catalog.html">Catalogue</a><br /><a href="contact.html">Contact</a></p>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>Ngaoundéré, Cameroun<br />Téléphone et e-mail à renseigner.</p>
+          </div>
+        </div>
+        <p class="footer-copy">© Tawadeu. Tous droits réservés.</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("form-note").textContent =
+          "Merci. L’envoi réel sera branché plus tard.";
+      });
+    </script>
+  </body>
+</html>
